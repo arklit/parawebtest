@@ -1,0 +1,40 @@
+$filterBorder: 1px solid #E8E8E8;
+$filterPadding: 10px;
+
+.filter{
+  margin-top: 60px;
+
+  &__container {
+    display: flex;
+    margin-left: 257px;
+  }
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    border: $filterBorder;
+    border-radius: 4px;
+    padding: $filterPadding;
+    width: 295px;
+    margin-right: 20px;
+  }
+  &__count {
+    border: $filterBorder;
+    padding: $filterPadding;
+    display: flex;
+  }
+  &__input {
+    border: none;
+    outline: none;
+    &-author {
+      width: 250px;
+    }
+    &-from {
+      width: 150px;
+    }
+    &-to {
+      width: 150px;
+      margin-left: 10px;
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+$image: url('https://sun1-86.userapi.com/s/v1/if2/mhaK1pIiUK34zVGPGZ1SGxhHCiqafMhSfr-7o3Am0OuLeZKM1nAP5aL6CzjR6TBdN31-wdYxvf7I3XZBtAUl6VQl.jpg?size=1439x546&quality=96&type=album');
+.carousel {
+  height: 546px;
+  background-image: $image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__container {
+    padding: 290px 0 0 255px;
+    color: white;
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 16px;
+    margin-top: 24px;
+    width: 453px;
+    line-height: 22px;
+  }
+  &__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 77px;
+  }
+  &__dot {
+    margin-right: 4px;
+    list-style: none;
+  }
+}

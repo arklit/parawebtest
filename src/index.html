@@ -2,9 +2,72 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>paraweb</title>
   </head>
-  <body>
-    <h1>Hello</h1>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <img src="<%=require('./images/logo.png')%>" alt="Логотип">
+        <div class="header__contacts">
+          <p class="header__phone">8 800 000 00 00</p>
+          <p class="hedaer__email">sales@logo.ru</p>
+        </div>
+      </div>
+    </header>
+  <main>
+    <section class="carousel">
+      <div class="carousel__container">
+        <h1 class="carousel__title">IT-инфраструктура для бизнеса</h1>
+        <p class="carousel__text">Мы предлагаем комплексные решения для всех уровней бизнеса: от индивидуальных предпринимателей до крупных международных компаний. Более 20 000 клиентов по всему миру доверяют нам.</p>
+      </div>
+      <ul class="carousel__dots">
+        <li class="carousel__dot"><img src="<%=require('./images/dot1.png')%>"/></li>
+        <li class="carousel__dot"><img src="<%=require('./images/dot2.png')%>"/></li>
+        <li class="carousel__dot"><img src="<%=require('./images/dot2.png')%>"/></li>
+      </ul>
+    </section>
+    <section class="filter">
+      <div class="filter__container">
+        <div class="filter__author">
+          <input class="filter__input filter-input-author" placeholder="Выберите автора"/>
+          <img src="<%=require('./images/user.png')%>"/>
+        </div>
+        <div class="filter__count">
+          <input class="filter__input filter__input-from" placeholder="От"/>
+          <p class="filter__tilda">~</p>
+          <input class="filter__input filter__input-to" placeholder="До"/>
+        </div>
+      </div>
+    </section>
+    <section class="cards">
+
+    </section>
+    <footer class="footer">
+      <div class="footer__logo-container">
+        <img class="footer__logo" src="<%=require('./images/bigLogo.png')%>"/>
+        <p class="footer__info">© ООО «Лого», 2008—2022</p>
+      </div>
+      <div class="footer__info-container">
+        <nav class="footer__links">
+          <a class="footer__link">Решения</a>
+          <a class="footer__link">Оборудование</a>
+          <a class="footer__link">О Компании</a>
+          <a class="footer__link">Блог</a>
+        </nav>
+        <nav class="footer__socials">
+          <img class="footer__social" src="<%=require('./images/tg.svg')%>"/>
+          <img class="footer__social" src="<%=require('./images/vk.svg')%>"/>
+          <img class="footer__social" src="<%=require('./images/twitter.svg')%>"/>
+          <img class="footer__social" src="<%=require('./images/H.svg')%>"/>
+        </nav>
+      </div>
+    </footer>
+  </main>
+  <template class="template">
+    <div class="card">
+
+    </div>
+  </template>
   </body>
 </html>

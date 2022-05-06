@@ -1,0 +1,41 @@
+.footer{
+  background-color: #092433;
+  height: 321px;
+  display: flex;
+  &__logo {
+    margin: 80px 0 11px 20px;
+    width: 200px;
+  }
+  &__info {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    margin-left: 23px;
+  }
+  &__logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+  }
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 394px;
+    color: white;
+  }
+  &__links {
+    margin-top: 80px;
+  }
+  &__link {
+    margin-right: 118px;
+    cursor: pointer;
+  }
+  &__socials {
+    margin-top: 120px;
+  }
+  &__social {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}

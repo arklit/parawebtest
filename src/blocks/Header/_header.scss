@@ -1,0 +1,19 @@
+.header {
+  height: 80px;
+
+  &__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  max-width: 983px;
+  margin: 0 auto;
+  padding: 24px 0 24px;
+  }
+  &__contacts {
+  display: flex;
+  align-items: center;
+  }
+  &__phone {
+    margin-right: 44px;
+  }
+}
