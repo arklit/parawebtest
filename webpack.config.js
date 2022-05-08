@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-        publicPath: ''
+    publicPath: ''
   },
   mode: 'development',
   devServer: {
@@ -28,21 +28,25 @@ module.exports = {
         type: 'asset/resource'
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { sourceMap: true, url: false}
+            options: { sourceMap: true, importLoaders: 1}
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: { sourceMap: true}
           },
           {
             loader: 'sass-loader',
-            options: { sourceMap: true }
+            options: { sourceMap: true}
           },
           {
             loader: 'postcss-loader',
-            options: { sourceMap: true }
-          }
+            options: { sourceMap: true}
+          },
         ]
       },
       ]
