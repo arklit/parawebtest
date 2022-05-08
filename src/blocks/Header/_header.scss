@@ -1,5 +1,6 @@
 .header {
   height: 80px;
+  background-color: white;
 
   &__container {
   display: flex;
@@ -17,3 +18,11 @@
     margin-right: 44px;
   }
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%
+}
+

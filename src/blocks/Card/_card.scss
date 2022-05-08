@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E8E8E8;
+
+  &__title {
+    font-size: 16px;
+    padding: 16px 0 16px 26px;
+    font-weight: 600;
+    border-bottom: 1px solid #E8E8E8;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.65);
+    padding: 24px 24px 0 26px;
+  }
+  &__content {
+    display: flex;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 16px 35px 24px 26px;
+  }
+  &__author  {
+    color: white;
+    background-color: black;
+    padding: 0 8px;
+    border-radius: 10px;
+    margin-right: 10px;
+    align-self: end;
+  }
+  &__date {
+    color: #595959;
+    padding: 0 8px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+  }
+}

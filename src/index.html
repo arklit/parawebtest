@@ -6,7 +6,7 @@
     <title>paraweb</title>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header sticky">
       <div class="header__container">
         <img src="<%=require('./images/logo.png')%>" alt="Логотип">
         <div class="header__contacts">
@@ -66,7 +66,13 @@
   </main>
   <template class="template">
     <div class="card">
-
+      <h3 class="card__title"></h3>
+        <p class="card__text"></p>
+        <div class="card__content">
+          <p class="card__author"></p>
+          <p class="card__date"></p>
+        </div>
+      </div>
     </div>
   </template>
   </body>
