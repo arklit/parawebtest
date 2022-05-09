@@ -2,11 +2,12 @@ $filterBorder: 1px solid #E8E8E8;
 $filterPadding: 10px;
 
 .filter{
-  margin-top: 60px;
+  max-width: 925px;
+  margin: 60px auto 0px;
+  padding-bottom: 24px;
 
   &__container {
     display: flex;
-    margin-left: 257px;
   }
   &__author {
     display: flex;
@@ -36,5 +37,13 @@ $filterPadding: 10px;
       margin-left: 10px;
     }
   }
+}
+.stickyFilter {
+  background-color: white;
+  position: sticky;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%
 }
 
