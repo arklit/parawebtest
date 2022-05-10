@@ -1,11 +1,11 @@
 $image: url('../../images/Background.png');
 .carousel {
-  margin-top: 80px;
   height: 546px;
   background-image: $image;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
   &__container {
     padding: 290px 0 0 255px;
     color: white;
@@ -22,11 +22,44 @@ $image: url('../../images/Background.png');
   }
   &__dots {
     display: flex;
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 20px;
     justify-content: center;
-    margin-top: 77px;
   }
   &__dot {
     margin-right: 4px;
     list-style: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .carousel__container {
+    padding: 200px 0 0 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel {
+    height: 280px;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      min-width: 320px;
+      max-width: 400px;
+      margin: 0 auto ;
+      padding: 111px 0 0 15px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    &__text {
+      font-size: 14px;
+      margin-top: 12px;
+      line-height: 19px;
+      width: 100%
+    }
   }
 }

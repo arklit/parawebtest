@@ -2,6 +2,7 @@ $filterBorder: 1px solid #E8E8E8;
 $filterPadding: 10px;
 
 .filter{
+  background-color: white;
   max-width: 925px;
   margin: 60px auto 0px;
   padding-bottom: 24px;
@@ -45,5 +46,42 @@ $filterPadding: 10px;
   left: 0;
   right: 0;
   width: 100%
+}
+@media screen and (max-width: 1024px) {
+  .filter {
+    max-width: 730px;
+    &__author {
+      width: 353px;
+    }
+    &__count {
+      width: 353px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    margin-top: 48px;
+  &__container {
+    flex-direction: column;
+    max-width: 358px;
+    margin: 0 auto;
+  }
+  &__input-to {
+    width: 120px;
+  }
+  &__input-author {
+    width: 250px;
+  }
+  &__author {
+    margin: 0 0 12px 0;
+    width: 100%;
+  }
+  &__count {
+    width: 100%;
+  }
+}
+  .stickyFilter {
+    top: 56px;
+  }
 }
 

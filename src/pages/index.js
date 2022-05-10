@@ -32,4 +32,21 @@ function getCards() {
 
 getCards()
 
+const number = document.querySelector('.header__phone')
+const email = document.querySelector('.header__email')
+const mobile = window.matchMedia('(max-width: 767px)')
 
+function swapHeader() {
+  if (mobile.matches) {
+    number.textContent = '';
+    email.textContent = '';
+    email.classList.add('header__email-mobile')
+    number.classList.add('header__phone-mobile')
+  } else {
+  email.classList.remove('header__email-mobile')
+  number.classList.remove('header__phone-mobile')
+  email.textContent = "sales@logo.ru"
+  number.textContent = '8 800 000 00 00'
+  }
+}
+swapHeader()

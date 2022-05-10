@@ -1,7 +1,9 @@
 .footer{
   background-color: #092433;
   height: 321px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% 60%;
+
   &__logo {
     margin: 80px 0 11px 20px;
     width: 200px;
@@ -21,7 +23,6 @@
   &__info-container {
     display: flex;
     flex-direction: column;
-    margin-left: 394px;
     color: white;
   }
   &__links {
@@ -38,4 +39,59 @@
     margin-right: 20px;
     cursor: pointer;
   }
+}
+@media screen and(max-width: 1024px) {
+  .footer__link {
+    margin-right: 50px;
+  }
+}
+@media screen and(max-width: 767px) {
+  .footer {
+    position: relative;
+    height: 325px;
+    &__info-container {
+      margin-left: 0;
+    }
+    &__logo {
+      width: 94px;
+      height: 50px;
+      margin: 0;
+      position: absolute;
+      top: 35px;
+      bottom: 0;
+      left: 16px;
+      right: 0;
+    }
+    &__links {
+      margin: 0;
+      position: absolute;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      top: 141px;
+      left: 16px;
+      right: 0;
+      bottom: 0;
+      height: 80px;
+      width: 300px
+    }
+    &__link {
+      width: 120px;
+      height: 20px;
+    }
+    &__socials {
+      margin: 0;
+      position: absolute;
+      top: 89px;
+      left: 16px;
+      right: 0px;
+      bottom: 0;
+    }
+    &__info {
+      position: absolute;
+      left: 15px;
+      top: 249px;
+      margin: 0;
+    }
+}
 }
