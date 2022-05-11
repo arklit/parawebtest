@@ -5,6 +5,9 @@
 @import '../blocks/Cards/cards';
 @import '../blocks/Card/card';
 @import '../blocks/Footer/footer';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
 * {
   padding: 0;

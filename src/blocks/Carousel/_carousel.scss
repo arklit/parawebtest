@@ -1,11 +1,13 @@
 $image: url('../../images/Background.png');
 .carousel {
   height: 546px;
-  background-image: $image;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  &__slide {
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
   &__container {
     padding: 290px 0 0 255px;
     color: white;
@@ -49,7 +51,7 @@ $image: url('../../images/Background.png');
       min-width: 320px;
       max-width: 400px;
       margin: 0 auto ;
-      padding: 111px 0 0 15px;
+      padding: 90px 0 0 15px;
     }
     &__title {
       font-size: 20px;
@@ -63,3 +65,15 @@ $image: url('../../images/Background.png');
     }
   }
 }
+.swiper .swiper-pagination-bullet {
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+ color: white;
+}
+

@@ -1,5 +1,6 @@
 import { getContent } from '../Api/getContent'
 import { template, cards } from '../utils/constants'
+import Swiper, { Pagination, Navigation} from 'swiper';
 import './index.scss'
 
 
@@ -36,12 +37,18 @@ const number = document.querySelector('.header__phone')
 const email = document.querySelector('.header__email')
 const mobile = window.matchMedia('(max-width: 767px)')
 
-function swapHeader() {
+function createTextNode() {
+  const currentElement = document.querySelector('.footer__logo-container')
+  currentElement.insertAdjacentHTML('beforeend',' <p class="footer__info-mobile">Лицензия на телематические услуги № 176267</p>')
+}
+
+function mobileChanges() {
   if (mobile.matches) {
     number.textContent = '';
     email.textContent = '';
     email.classList.add('header__email-mobile')
     number.classList.add('header__phone-mobile')
+    createTextNode()
   } else {
   email.classList.remove('header__email-mobile')
   number.classList.remove('header__phone-mobile')
@@ -49,4 +56,15 @@ function swapHeader() {
   number.textContent = '8 800 000 00 00'
   }
 }
-swapHeader()
+mobileChanges()
+
+Swiper.use([Pagination]);
+const swiper = new Swiper('.swiper', {
+  loop: false,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullet: true,
+  },
+  slidesPerView: 1,
+});
