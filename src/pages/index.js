@@ -1,12 +1,8 @@
 import { getContent } from '../Api/getContent'
-import { template, cards } from '../utils/constants'
+import { template, cards, form, authorInput, number, email, mobile } from '../utils/constants'
 import Swiper, { Pagination} from 'swiper';
 import './index.scss'
 
-const number = document.querySelector('.header__phone')
-const email = document.querySelector('.header__email')
-const mobile = window.matchMedia('(max-width: 767px)')
-const authorInput = document.querySelector('.filter_input-author')
 
 function createCard(item) {
   const time = item.publishedAt
@@ -64,9 +60,6 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
 });
 
-mobileChanges()
-getCards()
-
 function filter() {
   const items = document.querySelectorAll('.card')
   items.forEach(item => item.remove())
@@ -78,7 +71,10 @@ function filter() {
   })
   .catch(err => console.log(err))
 }
-const form = document.querySelector('.filter__author')
+
+mobileChanges()
+getCards()
+
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   filter()
