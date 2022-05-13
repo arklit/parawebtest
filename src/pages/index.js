@@ -1,8 +1,12 @@
 import { getContent } from '../Api/getContent'
 import { template, cards } from '../utils/constants'
-import Swiper, { Pagination, Navigation} from 'swiper';
+import Swiper, { Pagination} from 'swiper';
 import './index.scss'
 
+const number = document.querySelector('.header__phone')
+const email = document.querySelector('.header__email')
+const mobile = window.matchMedia('(max-width: 767px)')
+const authorInput = document.querySelector('.filter_input-author')
 
 function createCard(item) {
   const time = item.publishedAt
@@ -21,7 +25,6 @@ function render(cardsArr) {
    cards.append(cardElement)
  })
 }
-
 function getCards() {
   getContent()
   .then((res) => {
@@ -31,11 +34,6 @@ function getCards() {
   .catch(err => console.log(err))
 }
 
-getCards()
-
-const number = document.querySelector('.header__phone')
-const email = document.querySelector('.header__email')
-const mobile = window.matchMedia('(max-width: 767px)')
 
 function createTextNode() {
   const currentElement = document.querySelector('.footer__logo-container')
@@ -56,15 +54,32 @@ function mobileChanges() {
   number.textContent = '8 800 000 00 00'
   }
 }
-mobileChanges()
-
 Swiper.use([Pagination]);
 const swiper = new Swiper('.swiper', {
   loop: false,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    dynamicBullet: true,
   },
   slidesPerView: 1,
 });
+
+mobileChanges()
+getCards()
+
+function filter() {
+  const items = document.querySelectorAll('.card')
+  items.forEach(item => item.remove())
+  getContent()
+  .then((res) => {
+    const cardsArr = res.articles;
+    const newArr = cardsArr.filter(item => item.author === authorInput.value)
+    render(newArr)
+  })
+  .catch(err => console.log(err))
+}
+const form = document.querySelector('.filter__author')
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  filter()
+})
