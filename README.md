@@ -10,3 +10,5 @@
 - фильтр по дате неактивный т.к все новости одной даты
 - все по БЭМ
 - сборщик webpack
+## Deploy
+https://arklit.github.io/parawebtest/
